@@ -1,0 +1,6 @@
+D:\MiniDump c sgarp\MiniDump\MiniDump\bin\Release\MiniDump.exe.config
+D:\MiniDump c sgarp\MiniDump\MiniDump\bin\Release\MiniDump.exe
+D:\MiniDump c sgarp\MiniDump\MiniDump\bin\Release\MiniDump.pdb
+D:\MiniDump c sgarp\MiniDump\MiniDump\obj\Release\MiniDump.csprojResolveAssemblyReference.cache
+D:\MiniDump c sgarp\MiniDump\MiniDump\obj\Release\MiniDump.exe
+D:\MiniDump c sgarp\MiniDump\MiniDump\obj\Release\MiniDump.pdb
