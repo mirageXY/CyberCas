@@ -1,0 +1,5 @@
+D:\SharpDPAPI-master\SharpChrome\bin\Debug\SharpChrome.exe.config
+D:\SharpDPAPI-master\SharpChrome\bin\Debug\SharpChrome.exe
+D:\SharpDPAPI-master\SharpChrome\bin\Debug\SharpChrome.pdb
+D:\SharpDPAPI-master\SharpChrome\obj\Debug\SharpChrome.exe
+D:\SharpDPAPI-master\SharpChrome\obj\Debug\SharpChrome.pdb

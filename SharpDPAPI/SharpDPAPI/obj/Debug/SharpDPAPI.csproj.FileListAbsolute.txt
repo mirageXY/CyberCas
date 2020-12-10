@@ -1,0 +1,5 @@
+D:\SharpDPAPI-master\SharpDPAPI\bin\Debug\SharpDPAPI.exe.config
+D:\SharpDPAPI-master\SharpDPAPI\bin\Debug\SharpDPAPI.exe
+D:\SharpDPAPI-master\SharpDPAPI\obj\Debug\SharpDPAPI.exe
+D:\SharpDPAPI-master\SharpDPAPI\obj\Debug\SharpDPAPI.pdb
+D:\SharpDPAPI-master\SharpDPAPI\bin\Debug\SharpDPAPI.pdb
