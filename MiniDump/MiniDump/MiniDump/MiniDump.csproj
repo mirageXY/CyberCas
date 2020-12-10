@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6082EAFD-D91D-4135-B59D-4E8E96D57CD2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiniDump</RootNamespace>
+    <AssemblyName>MiniDump</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="constants.cs" />
+    <Compile Include="CreateProcess.cs" />
+    <Compile Include="MonkeyWorks\Combine.cs" />
+    <Compile Include="MonkeyWorks\SMB\DCERPC\DCERPCAlterContext.cs" />
+    <Compile Include="MonkeyWorks\SMB\DCERPC\DCERPCAUTH3.cs" />
+    <Compile Include="MonkeyWorks\SMB\DCERPC\DCERPCBind.cs" />
+    <Compile Include="MonkeyWorks\SMB\DCERPC\DCERPCRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\DCOM\DCOMRemoteCreateInstance.cs" />
+    <Compile Include="MonkeyWorks\SMB\DCOM\DCOMRemQueryInterface.cs" />
+    <Compile Include="MonkeyWorks\SMB\DCOM\DCOMRemRelease.cs" />
+    <Compile Include="MonkeyWorks\SMB\DCOM\NTLMSSPVerifier.cs" />
+    <Compile Include="MonkeyWorks\SMB\NetBIOS\NetBIOSSessionService.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBCloseRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBHeader.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBLogoffAndXRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBNegotiateProtocolRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBNTCreateAndXRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBReadAndXRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBSessionSetupAndXRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBTreeConnectAndXRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBTreeDisconnectRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB1\SMBWriteAndXRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2CloseRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2CreateRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2FindFileRequestFile.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2GetInfo.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2Header.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2IoctlRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2NegotiateProtocolRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2NTLMSSPAuth.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2NTLMSSPNegotiate.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2ReadRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2SessionLogoffRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2SessionSetupRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2SetInfo.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2TreeConnectRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2TreeDisconnectRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SMB2\SMB2WriteRequest.cs" />
+    <Compile Include="MonkeyWorks\SMB\SVCCTL\SVCCTLSCMCloseServiceHandle.cs" />
+    <Compile Include="MonkeyWorks\SMB\SVCCTL\SVCCTLSCMCreateServiceW.cs" />
+    <Compile Include="MonkeyWorks\SMB\SVCCTL\SVCCTLSCMDeleteServiceW.cs" />
+    <Compile Include="MonkeyWorks\SMB\SVCCTL\SVCCTLSCMOpenSCManagerW.cs" />
+    <Compile Include="MonkeyWorks\SMB\SVCCTL\SVCCTLSCMStartServiceW.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\FltUserStructures.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Minidumpapiset.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\MinWinBase.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Ntifs.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Ntpsapi.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Ntsecapi.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\ProcessThreadsApi.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Rpcdce.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Subauth.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\TlHelp32.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Winbase.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Wincon.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\WinCred.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Wincrypt.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Windef.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Winnt.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Winsvc.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Winternl.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\Winuser.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Headers\wudfwdm.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\advapi32.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\crypt32.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\dbghelp.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\fltlib.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\kernel32.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\ntdll.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\secur32.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\user32.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\vaultcli.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\wlanapi.cs" />
+    <Compile Include="MonkeyWorks\Unmanaged\Libraries\wtsapi32.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
