@@ -3,7 +3,8 @@
 #MiniDump Objectives:
 
 1) Dump lsass process to dmp file at the same exe directory.
-2) Get system privillege to the same executing process. Currently process explorer sees it as Admin, but WindowsIdentity.GetCurrent().IsSystem returns True. However, Launching another process with system privillege is successfull as task manager, process explorer, and WindowsIdentity see the new process as system.
+2) Get system privillege to the same executing process. Currently process explorer sees it as Admin, but WindowsIdentity.GetCurrent().IsSystem returns True.
+However, Launching another process with system privillege is successfull as task manager, process explorer, and WindowsIdentity see the new process as system.
 3)Checks of AV is installed on the system.
 
 
